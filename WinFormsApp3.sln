@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp3", "WinFormsApp3\WinFormsApp3.csproj", "{4FE04090-336F-4FA7-BC18-3874F8643009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindFiles", "FindFiles\FindFiles.csproj", "{CAB9DCB7-9131-4967-9B34-38530C6C6BB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FE04090-336F-4FA7-BC18-3874F8643009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FE04090-336F-4FA7-BC18-3874F8643009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FE04090-336F-4FA7-BC18-3874F8643009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FE04090-336F-4FA7-BC18-3874F8643009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAB9DCB7-9131-4967-9B34-38530C6C6BB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAB9DCB7-9131-4967-9B34-38530C6C6BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAB9DCB7-9131-4967-9B34-38530C6C6BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAB9DCB7-9131-4967-9B34-38530C6C6BB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7FFAE4C-62F7-41D4-99B1-8D8B0B7407EE}
+	EndGlobalSection
+EndGlobal
