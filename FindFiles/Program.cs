@@ -27,7 +27,7 @@ foreach(string name in file_names)
     {
         text = streamReader.ReadToEndAsync().Result;
     }
-    File.Copy(name, $"{name}.old");
+    File.Copy(name, $"{name}.old",true);
 
     text.Replace("", "",true,CultureInfo.CurrentCulture);
 
