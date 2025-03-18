@@ -40,22 +40,22 @@ namespace WinFormsApp3
 
         private void Potok_1()
         {
-            Task task2 = new Task(Searcher, token);
+            Task task1 = new Task(Searcher, token);
 
-            tasks.Add(task2);
+            tasks.Add(task1);
 
             resetEvent.Set();
         }
         private void  Potok_2()
         {
-            Task task1 = new Task(
+            Task task2 = new Task(
                 ()=> {
                     FileSearcher fs = new FileSearcher();
                     IEnumerable<string> objects = fs.GetFiles3("c:\\", "*.txt");
                     int count = objects.Count();
                     Invoke(GetMaximum, count); 
                 });
-            tasks.Add(task1);
+            tasks.Add(task2);
         }
         private void Potok_3()
         {
