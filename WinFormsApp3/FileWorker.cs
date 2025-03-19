@@ -9,7 +9,7 @@ namespace WinFormsApp3
     internal class FileWorker
     {
         public FileWorker() { }
-        public void SearchRegex()
+        public void SearchRegex(string text, string magic_word)
         {
 
         }
