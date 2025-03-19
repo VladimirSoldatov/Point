@@ -15,7 +15,7 @@ namespace WinFormsApp3
         public Form2()
         {
             InitializeComponent();
-
+            list_of_words = new List<string>();
         }
         public List<string> list_of_words;
         private void Form2_Load(object sender, EventArgs e)
@@ -29,11 +29,13 @@ namespace WinFormsApp3
             {
                 textBox1.Enabled = true;
                 button1.Enabled = false;
+                button3.Enabled = true;
             }
             else
             {
                 textBox1.Enabled = false;
                 button1.Enabled = true;
+                button3.Enabled = false;
             }
         }
 
@@ -57,8 +59,18 @@ namespace WinFormsApp3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            if(list_of_words.Count()>0)
             DialogResult = DialogResult.OK;
+            Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string[] words = textBox1.Text.Split(' ');
+            if(words.Length>1)
+            {
+                list_of_words.AddRange(words);                 
+            }
         }
     }
 }

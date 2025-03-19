@@ -4,12 +4,13 @@ namespace WinFormsApp3
 {
     public partial class Form1 : Form
     {
+        FileWorker worker;
         public Form1()
         {
             InitializeComponent();
 
             resetEvent = new ManualResetEvent(false);
-
+            worker = new FileWorker();
 
         }
         CancellationTokenSource source;
@@ -25,13 +26,18 @@ namespace WinFormsApp3
             var form2 = new Form2();
             if (DialogResult.OK == form2.ShowDialog())
             {
-                var list = form2.list_of_words;
+
+                worker.Insert_words(form2.list_of_words);
+                Potok_1();
+                Potok_2();
+                Potok_3();
+                tasks.ForEach(p => p.Start());
+            }
+            else
+            {
+                MessageBox.Show("Слова не были введены!");
             }
 
-            Potok_1();
-            Potok_2();
-            Potok_3();
-            tasks.ForEach(p => p.Start());
 
 
         }
@@ -92,11 +98,14 @@ namespace WinFormsApp3
         {
 
             FileSearcher fs = new FileSearcher();
-            foreach (string file in fs.GetFiles("c:\\", "*.txt"))
+            foreach (string file in fs.GetFiles("D:\\1\\", "*.txt"))
             {
                 if (token.IsCancellationRequested)
                     return;
                 resetEvent.WaitOne();
+                File.Copy(file, $"D:\\OldFiles\\{file}");
+                string old_text = worker.ReadFile(file);
+                
                 Invoke(() =>
                 {
                     label1.Text = file;

@@ -34,6 +34,7 @@
             radioButton2 = new RadioButton();
             openFileDialog1 = new OpenFileDialog();
             button2 = new Button();
+            button3 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -48,7 +49,7 @@
             // button1
             // 
             button1.Enabled = false;
-            button1.Location = new Point(81, 153);
+            button1.Location = new Point(81, 184);
             button1.Name = "button1";
             button1.Size = new Size(297, 23);
             button1.TabIndex = 1;
@@ -71,7 +72,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(507, 153);
+            radioButton2.Location = new Point(507, 188);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(94, 19);
             radioButton2.TabIndex = 3;
@@ -94,11 +95,23 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // button3
+            // 
+            button3.Enabled = false;
+            button3.Location = new Point(81, 130);
+            button3.Name = "button3";
+            button3.Size = new Size(297, 23);
+            button3.TabIndex = 5;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
@@ -119,5 +132,6 @@
         private RadioButton radioButton2;
         private OpenFileDialog openFileDialog1;
         private Button button2;
+        private Button button3;
     }
 }
